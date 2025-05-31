@@ -4,12 +4,22 @@ SoundFile sample1;
 SoundFile sample2;
 SoundFile sample3;
 SoundFile sample4;
+SoundFile sample5;
 
 float bpm = 120; // beats per minute
 
-float myFrameRate = bpm / 60; // frame rate = beats per second
+int hihatTime = 90;
+int bassTime = 105;
+boolean secondHit = false;
 
-int lastBeatTime = 0;
+int clapPattern;
+
+float color01 = random(255);
+float color02 = random(255);
+float color03 = random(255);
+float color1 = color01;
+float color2 = color02;
+float color3 = color03;
 
 void setup() {
   size(640, 360);
@@ -18,33 +28,54 @@ void setup() {
   sample1 = new SoundFile(this, "kick.wav");
   sample2 = new SoundFile(this, "hihat.wav");
   sample3 = new SoundFile(this, "clap.wav");
-  sample4 = new SoundFile(this, "bass drum.wav");
-  frameRate(myFrameRate);
+  sample4 = new SoundFile(this, "bass drum.mp3");
+  sample4.amp(1.0);
+  sample5 = new SoundFile(this, "snare.wav");
+  frameRate(bpm);
 }
 
 void draw() {
-  background(random(255), random(255), random(255));
+  background(color01, color02, color03);
+  boolean pattern2 = (frameCount / 600) % 2 == 1;
+  color01 = lerp(color01, color1, 0.05);
+  color02 = lerp(color02, color2, 0.05);
+  color03 = lerp(color03, color3, 0.05);
   
-  
-  // play every beat
-  sample1.play();
-
-  if (!snarePlayed && millis(）lastBeatTime > 500) {
-    sample2.play();
-    snarePlayed = true;
+  if (pattern2) {
+    clapPattern = 30;
+  } else {
+    clapPattern = 120;
+  }
+   //play every beat
+  if (frameCount % 60 == 0) {
+    sample1.play();
+    color1 = random(255);
+    
+      if (frameCount % 60 == 0 && random(1) < 0.2) {
+        sample5.play();
+      }
   }
   
-  //if (millis() - lastBeatTime > 500) {
-  //  sample2.play();
-  //  lastBeatTime = millis();
- // }
+  if (frameCount == hihatTime) {
+    sample2.play();
+    hihatTime += 60;
+    color3 = hihatTime;
+  }
 
-  //if (frameCount % 2 == 0) {
-  //  sample3.play();
- // }
+  if (frameCount % clapPattern == 0) {
+    sample3.play();
+    color2 = random(255);
+  }
   
-  //if (millis() - lastBeatTime >= 750) {
-  //  sample4.play();
-   // lastBeatTime = millis();
- // }
+  if (frameCount == bassTime) {
+    sample4.play();
+
+    if (!secondHit) {
+      bassTime += 45;
+      secondHit = true;
+    } else {
+      bassTime += 195;
+      secondHit = false;
+    }
+  }
 }
