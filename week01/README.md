@@ -23,13 +23,13 @@ Each sketch is written in its own `.pde` file. Open and run them in Processing.
 
 ## Screenshots
 
-- **Task 2**
+- **Task 1** – Add colors
 ![Task1 Output](<屏幕截图 2025-03-20 211106.png>)
 
-- **Task 2** – Intended Vertical Gradient  
+- **Task 2** – Change direction
 ![Task2 Output](<屏幕截图 2025-03-20 211303.png>)
 
-- **Task 3** – Radial Gradient  
+- **Task 3** – Circular Gradient  
 ![Task3 Output](<屏幕截图 2025-03-20 212838.png>)
 
 ---
