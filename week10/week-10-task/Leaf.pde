@@ -14,7 +14,7 @@ class Leaf {
     lifespan = 255;
     rotation = random(TWO_PI);
     rotationSpeed = random(-0.05, 0.05);
-    leafColor = color(random(150, 255), random(100, 180), 0);
+    leafColor = color(random(150, 255), random(100, 180), 0); // Autumn-like yellow/orange
   }
 
   void applyForce(PVector force) {
@@ -24,19 +24,20 @@ class Leaf {
   void update() {
     velocity.add(acceleration);
     position.add(velocity);
-    acceleration.mult(0);
-    lifespan -= 1.5;
-    rotation += rotationSpeed;
+    acceleration.mult(0); // Clear acceleration each frame
+    lifespan -= 1.5; // Slowly fade away
+    rotation += rotationSpeed; // Gradual spinning
   }
 
+  // this part of code I've used suggetion from AI
   void display() {
-    pushMatrix();
+    pushMatrix(); // Save current drawing state
     translate(position.x, position.y);
-    rotate(rotation);
+    rotate(rotation); // Rotate around center for natural fall
     noStroke();
     fill(leafColor, lifespan);
     ellipse(0, 0, 10, 20);
-    popMatrix();
+    popMatrix(); // Restore drawing state
   }
 
   boolean isDead() {

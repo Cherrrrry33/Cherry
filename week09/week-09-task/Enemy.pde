@@ -4,18 +4,18 @@ class Enemy {
   color col;
 
   Enemy() {
-    float y = random(300, height);
+    float y = random(300, height); // Spawn somewhere in lower screen
     boolean fromLeft = random(1) < 0.5;
 
     if (fromLeft) {
-      position = new PVector(0, y);
-      velocity = new PVector(5, 0);  // move right
+      position = new PVector(0, y); // Start at left edge
+      velocity = new PVector(5, 0); // Move right
     } else {
-      position = new PVector(width, y);
-      velocity = new PVector(-5, 0); // move left
+      position = new PVector(width, y); // Start at right edge
+      velocity = new PVector(-5, 0); // Move left
     }
 
-    col = color(random(255), 0, 0);  // red-ish color
+    col = color(random(255), 0, 0);
   }
 
   void update() {
@@ -25,7 +25,7 @@ class Enemy {
   void display() {
     fill(col);
     noStroke();
-    ellipse(position.x, position.y, 20, 20);  // a simple circle enemy
+    ellipse(position.x, position.y, 20, 20);
   }
 
   boolean isOffScreen() {

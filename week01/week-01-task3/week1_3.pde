@@ -7,7 +7,7 @@ void draw() {
   
   float centerX = width / 2.0;
   float centerY = height / 2.0;
-  float maxDist = dist(0, 0, centerX, centerY);
+  float maxDist = dist(0, 0, centerX, centerY); // Max distance for mapping (corner to center)
   
   for (int x = 0; x < width; x++) {
     for (int y = 0; y < height; y++) {

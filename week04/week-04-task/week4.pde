@@ -1,3 +1,5 @@
+// This code has used code from lesson as reference
+
 color colorA;
 color colorB;
 

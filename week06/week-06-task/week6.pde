@@ -45,6 +45,7 @@ void setup() {
 void draw() {
   loadPixels();
   
+  // Animate the mid filter's frequency using a sine wave
   float sweep = map(sin(millis() / 1000.0), -1, 1, 200, 400);
   midFilter.freq(sweep);
   
@@ -52,8 +53,10 @@ void draw() {
     int x = i % width;
     int y = i / width;
 
+    // Generate grayscale noise based on position and sweep
     pixels[i] = color(map(noise(x * 0.1, y * 0.1, frameCount * sweep), 0, 1, 0, 255));
     
+    // Update colorB dynamically based on the sweep value
     colorB = color(sweep, 220, 125);
 
     pixels[i] = duotone(pixels[i], colorA, colorB);

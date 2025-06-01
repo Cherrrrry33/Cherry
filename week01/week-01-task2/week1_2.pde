@@ -7,6 +7,7 @@ void draw() {
   loadPixels();
   for (int x = 0; x < width; x++) {
     for (int y = 0; y < height; y++) {
+      // Using 'height' here creates a vertical gradient, not horizontal
       float normalizedX = map(x, 0, height - 1, 0, 1);
       int red = int(255 * normalizedX);
       int green = 125;

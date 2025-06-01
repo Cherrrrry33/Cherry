@@ -7,7 +7,7 @@ SoundFile sample4;
 SoundFile sample5;
 
 float bpm = 120;
-int framesPerBeat = int(60.0 / bpm * 60);
+int framesPerBeat = int(60.0 / bpm * 60); // Convert BPM to frame count per beat
 
 float hihatTime = frameRate;
 float bassTime = frameRate;
@@ -16,6 +16,7 @@ boolean secondHit = false;
 
 boolean snarePressed = false;
 
+// Colors that will be interpolated for background animation
 float color01 = random(255);
 float color02 = random(255);
 float color03 = random(255);
@@ -59,14 +60,14 @@ void draw() {
   color03 = lerp(color03, color3, 0.05);
 
   if (frameCount % 60 == 0 && isLooping[0]) {
-    sample1.play(); // kick
+    sample1.play();
     color1 = random(255);
   }
 
 if (isLooping[1] && frameCount >= hihatTime) {
   sample2.play(); // hihat
-  hihatTime += framesPerBeat;  // Move to the next scheduled hit
-  color3 = random(255);        // Optional: add color change
+  hihatTime += framesPerBeat; // Advance to next hi-hat beat
+  color3 = random(255);
 }
 
   if (frameCount % clapPattern == 0 && isLooping[2]) {
@@ -93,9 +94,9 @@ void drawButtons() {
     if (i == 4 && snarePressed) {
       fill(255, 100, 100);  // Red = active press (for snare)
     } else if (i != 4 && isLooping[i]) {
-      fill(100, 200, 100);  // Green = looping
+      fill(100, 200, 100);
     } else {
-      fill(200);            // Gray = inactive
+      fill(200);
     }
 
     rect(buttonX[i], buttonY, buttonW, buttonH);
@@ -112,7 +113,7 @@ void mousePressed() {
         mouseY > buttonY && mouseY < buttonY + buttonH) {
 
       if (i == 4) {
-        // Trigger mode: play snare once
+        // Snare is a one-shot trigger
         sample5.play();
         snarePressed = true;  
       } else {

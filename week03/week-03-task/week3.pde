@@ -16,6 +16,7 @@ void draw() {
       float x = i * circleSize + circleSize / 2;
       float y = j * circleSize + circleSize / 2;
       
+      // Alternate colors in a checkerboard pattern
       if ((i + j) % 2 == 0) {
         fill(57, 197, 187);
       } else {

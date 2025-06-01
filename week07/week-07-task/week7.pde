@@ -31,11 +31,13 @@ void setup() {
   sample4 = new SoundFile(this, "bass drum.mp3");
   sample4.amp(1.0);
   sample5 = new SoundFile(this, "snare.wav");
-  frameRate(bpm);
+  frameRate(bpm); // Treat each frame as a beat step
 }
 
 void draw() {
   background(color01, color02, color03);
+
+  // Toggle between two clap patterns every 600 frames
   boolean pattern2 = (frameCount / 600) % 2 == 1;
   color01 = lerp(color01, color1, 0.05);
   color02 = lerp(color02, color2, 0.05);
@@ -46,7 +48,8 @@ void draw() {
   } else {
     clapPattern = 120;
   }
-   //play every beat
+  
+  // Kick and occasional snare every beat
   if (frameCount % 60 == 0) {
     sample1.play();
     color1 = random(255);
@@ -56,17 +59,20 @@ void draw() {
       }
   }
   
+  // Hi-hat hits every 60 frames starting from 90
   if (frameCount == hihatTime) {
     sample2.play();
     hihatTime += 60;
     color3 = hihatTime;
   }
 
+  // Clap pattern changes based on current mode
   if (frameCount % clapPattern == 0) {
     sample3.play();
     color2 = random(255);
   }
   
+  // Bass drum follows an alternating pattern (short + long delay)
   if (frameCount == bassTime) {
     sample4.play();
 

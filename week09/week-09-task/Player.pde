@@ -17,8 +17,9 @@ class Player {
   void update() {
     velocity.add(acceleration);
     position.add(velocity);
-    acceleration.mult(0);
+    acceleration.mult(0); // Reset acceleration after applying
 
+    // Prevent falling below the screen
     if (position.y > height) {
       position.y = height - h;
       onGround = true;
@@ -34,6 +35,7 @@ class Player {
   }
 
   void jump() {
+    // Can only jump if touching the ground
     if (onGround) {
       velocity.y = -10;
       onGround = false;
@@ -44,8 +46,4 @@ class Player {
     fill(255, 0, 0);
     rect(position.x, position.y, w, h);
   }
-    
-    void bounce() {
-      velocity.y = -8;
-    }
 }

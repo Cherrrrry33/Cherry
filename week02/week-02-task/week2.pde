@@ -15,6 +15,7 @@ void draw() {
   int[] histG = new int[256];
   int[] histB = new int[256];
   
+  // Count the frequency of each intensity for R, G, B channels
   for (int i = 0; i < sample.pixels.length; i++) {
     color c = sample.pixels[i];
     
@@ -27,6 +28,7 @@ void draw() {
     histB[b]++;
   }
 
+  // Draw histograms with vertical offset
   drawHistogram(histR, color(255, 0, 0), height - 200);
   drawHistogram(histG, color(0, 255, 0), height - 100);
   drawHistogram(histB, color(0, 0, 255), height);

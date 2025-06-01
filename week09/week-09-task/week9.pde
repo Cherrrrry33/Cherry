@@ -3,7 +3,6 @@ ArrayList<Enemy> enemies;
 
 boolean gameOver = false;
 
-// Each platform is stored as [x, y, width, height]
 float[][] platforms = {
   {0, 550, 800, 50},
   {300, 450, 100, 20},
@@ -36,7 +35,7 @@ void draw() {
       }
     }
 
-    // Spawn enemies
+    // Spawn new enemy every second
     if (frameCount % 60 == 0) {
       enemies.add(new Enemy());
     }
@@ -53,7 +52,7 @@ void draw() {
         gameOver = true;
       }
 
-      // Remove if off screen
+      // Remove enemies that move off screen
       if (e.isOffScreen()) {
         enemies.remove(i);
       }

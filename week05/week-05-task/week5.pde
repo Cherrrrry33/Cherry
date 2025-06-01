@@ -11,9 +11,6 @@ void setup() {
   colorA = color(57,179,187);
   colorB = color(240,150,190);
 
-  // this code sets up `cam` as a Capture device, using the first camera
-  // on your computer.
-  // if this doesn't work: speak to Tom
   String[] cameras = Capture.list();
   
   if (cameras.length == 0) {
@@ -25,26 +22,18 @@ void setup() {
       println(cameras[i]);
     }
     
-    // The camera can be initialized directly using an 
-    // element from the array returned by list():
     cam = new Capture(this, 640,480,cameras[0], 30);
     cam.start();     
   }      
 }
 
 void draw() {
-  // every frame, if the camera is ready, we update `cam` to have
-  // the latest data from it
   if (cam.available() == true) {
     cam.read();
   }
   
-  // this next line is for TESTING
-  // once the image appears on screen, delete it, and uncomment the code below
   image(cam,0,0);
   
-  // to draw the new image pixel-by-pixel:
-  // the Capture object (cam) has a property "pixels" that works just like a screen.
   loadPixels();
   cam.loadPixels();
     
@@ -61,8 +50,10 @@ void draw() {
 
     pixels[i] = color(newPixelValue);
     
+    // Distribute error to the next pixel
     diffuseError(i, error);
     
+    // Apply duotone effect based on brightness
     pixels[i] = duotone(pixels[i], colorA, colorB);
   }
   updatePixels();

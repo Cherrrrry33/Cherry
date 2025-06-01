@@ -31,7 +31,7 @@ This sketch is a simple platformer game where a player character can move and ju
 This sketch helped me explore:
 
 - Structuring a simple game using custom classes (`Player`, `Enemy`)
-- Implementing basic physics: gravity, jumping, and platform collision
+- Implementing basic physics: gravity, jumping, and platform collision (I've used AI tool here to help me understand the logic)
 - Managing object lists (enemies) and screen boundaries
 
 ### Challenges

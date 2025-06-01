@@ -7,9 +7,6 @@ void setup() {
   gravity = new PVector(0, 0.05);
   wind = new PVector(0, 0);
   systems = new ArrayList<LeafSystem>();
-  
-  // Start with one leaf system
-  systems.add(new LeafSystem(width/2, -10));
 }
 
 void draw() {
@@ -27,6 +24,6 @@ void draw() {
 }
 
 void mousePressed() {
-  // Generate a burst of leaves from the mouse position
+  // Create a new leaf system where the mouse is clicked
   systems.add(new LeafSystem(mouseX, mouseY));
 }
