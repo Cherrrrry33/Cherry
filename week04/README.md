@@ -1,4 +1,4 @@
-# Week 04 – Duotone Noise Texture
+# Week-04 Task
 
 This sketch uses Perlin noise to create a smoothly varying texture and maps grayscale noise values to a custom duotone gradient using `lerpColor()`.
 
@@ -13,17 +13,17 @@ This sketch uses Perlin noise to create a smoothly varying texture and maps gray
 
 ## How to Run
 
-Run `Week-04-Task.pde` in Processing.
+Run `week4.pde` in Processing.
 
 ---
 
-## Screengrab
+## Video
 
-[Week4 Output](https://artslondon-my.sharepoint.com/personal/c_lau0820241_arts_ac_uk/_layouts/15/stream.aspx?id=%2Fpersonal%2Fc%5Flau0820241%5Farts%5Fac%5Fuk%2FDocuments%2FComputational%20Practices%2F3%E6%9C%8820%E6%97%A5%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E9d21e6b1%2Da1c0%2D4b85%2Da116%2Daba6367337c2)
+[Week4 Output](https://artslondon-my.sharepoint.com/:v:/r/personal/c_lau0820241_arts_ac_uk/Documents/Computational%20Practices/week4.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tyHodt)
 
 ---
 
-## 📝 Design Notes
+## Design Notes
 
 This sketch helped me understand:
 

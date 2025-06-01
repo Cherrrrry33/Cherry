@@ -25,7 +25,7 @@ This sketch loads an image and displays the histogram of its red, green, and blu
 
 ---
 
-## 📝 Design Notes
+## Design Notes
 
 This sketch helped me understand how to:
 

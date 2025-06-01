@@ -23,7 +23,7 @@ Run `Week-03-Task.pde` in Processing.
 
 ---
 
-## 📝 Design Notes
+## Design Notes
 
 This sketch helped me explore:
 

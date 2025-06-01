@@ -1,4 +1,4 @@
-# Week 01 – Pixel Gradient Experiments
+# Week-01 Task
 
 This week’s focus was on learning how to manipulate pixels directly in Processing to create color gradients. Below are three gradient sketches that explore color transitions in different directions and patterns.
 
@@ -15,9 +15,9 @@ This week’s focus was on learning how to manipulate pixels directly in Process
 
 Each sketch is written in its own `.pde` file. Open and run them in Processing.
 
-- `task1.pde` – Horizontal RGB gradient
-- `task2.pde` – Vertical gradient with constant green  
-- `task3.pde` – Radial gradient based on distance from center
+- `week1_1.pde` – Add color
+- `week1_2.pde` – Change direction
+- `week1_3.pde` – Circular gradient based on distance from center
 
 ---
 
