@@ -1,4 +1,4 @@
-# Week 05 – Duotone Camera Dithering
+# Week-05 Task
 
 This sketch captures live video from the webcam, applies a dithering effect by thresholding and diffusing brightness errors, and remaps the output to a custom duotone gradient. It combines real-time image processing with generative color output.
 
@@ -16,13 +16,13 @@ This sketch captures live video from the webcam, applies a dithering effect by t
 
 1. Make sure your webcam is connected.
 2. Ensure the `processing.video` library is installed.
-3. Run `Week-05-Task.pde` in Processing.
+3. Run `week5.pde` in Processing.
 
 ---
 
 ## Video
 
-📹 [Watch Week 5 Output](https://artslondon-my.sharepoint.com/personal/c_lau0820241_arts_ac_uk/_layouts/15/stream.aspx?id=%2Fpersonal%2Fc%5Flau0820241%5Farts%5Fac%5Fuk%2FDocuments%2FComputational%20Practices%2F3%E6%9C%8820%E6%97%A5%20%281%29%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ec2747b74%2D5bc1%2D4e44%2Db611%2D739688b7bb43)
+[Watch Week 5 Output](https://artslondon-my.sharepoint.com/:v:/r/personal/c_lau0820241_arts_ac_uk/Documents/Computational%20Practices/week5.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7OWhzx)
 
 ---
 
