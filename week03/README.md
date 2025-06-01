@@ -1,4 +1,4 @@
-# Week 03 – Generative Circle Grid
+# Week-03 Task
 
 This sketch generates a 5×5 grid of circles. It alternates between fixed and randomly colored circles to create a simple generative pattern using basic arithmetic and randomness.
 
@@ -13,7 +13,7 @@ This sketch generates a 5×5 grid of circles. It alternates between fixed and ra
 
 ## How to Run
 
-Run `Week-03-Task.pde` in Processing.
+Run `week3.pde` in Processing.
 
 ---
 

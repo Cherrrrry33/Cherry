@@ -6,8 +6,7 @@ void setup() {
   
   colorA = color(57,179,187);
   colorB = color(17,220,125);
-  
-//noLoop();
+
 }
 
 void draw() {

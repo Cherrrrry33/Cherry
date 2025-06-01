@@ -1,4 +1,4 @@
-# Week 02 – Image Histogram Visualization
+# Week-02 Task
 
 This sketch loads an image and displays the histogram of its red, green, and blue channels. It analyzes the color distribution and visualizes each color channel as a separate line graph.
 
@@ -15,7 +15,7 @@ This sketch loads an image and displays the histogram of its red, green, and blu
 ## How to Run
 
 1. Make sure `sample.jpg` is in a `data` folder.
-2. Run `Week-02-Task.pde` in Processing.
+2. Run `week2.pde` in Processing.
 
 ---
 
